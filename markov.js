@@ -6,11 +6,24 @@ var titles = [];
 
 	for(i in arr){
 		if(arr[i] == 123) alert(arr[i]);
-	}
-
-		);
+	});
 	}, 'text');
+
+	//$.get('titles.txt', function(data) {
+	//}, 'text');
+$.getJSON( "titles.json", function( data ) {
+	//array to store all titles, change to use array that is created below
+  var items = [];
+  $.each( data, function( key, val ) {
+	  //console to see all keys and values for debugging purposes
+    //console.log( "key is: " + key + " .value is: " + val + " ." );
+    //push items to array
+    items.push( val);
   });
+  //print items to debug
+  //console.log(items);
+
+});  });
 
 var startwords =[];
 var terminals = {};
