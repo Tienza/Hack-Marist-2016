@@ -1,0 +1,24 @@
+.row-blackout{
+background-color:black;
+color:white;
+height:400px;
+padding-top:5%;
+opacity:0.6;
+z-index:0;
+position:relative;
+}
+.navbar {
+    border-radius: 0px;
+    margin-bottom: 0px;
+    
+}
+.row-images{
+background-image:url("https://pixabay.com/static/uploads/photo/2016/07/11/15/43/pretty-woman-1509956_960_720.jpg");
+background-repeat:no-repeat;
+background-size: 100% auto;
+background-position:center center;
+height:400px;
+z-index:-1;
+margin-top:-400px;
+position:relative;
+}

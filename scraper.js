@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 console.log(document.getElementbyClass("titleText"));
 $.ajax({
      url: "https://news.google.com/?ar=1477752873",
@@ -10,3 +11,6 @@ $.ajax({
           }
      }
 });
+=======
+//console.log(document.getElementsbyClassName("titleText"));
+>>>>>>> 7494f823fcef4b4a1c7e3c7315f0ca121cd63c5c
