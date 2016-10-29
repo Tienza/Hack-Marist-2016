@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 	
 var titles = ["'This Changes Everything': Donald Trump Exults as Hillary Clinton's Team Scrambles",
 "Shift in the Electorates Makeup Tightens the Presidential Contest (POLL)",
@@ -40,9 +41,13 @@ var titles = ["'This Changes Everything': Donald Trump Exults as Hillary Clinton
 	   alert(data);
 	}, 'text');
   });
+=======
+>>>>>>> d51e710f1a6099d85c8d3caa527b880a52ca8510
 var startwords =[];
-var terminals ={};
+var terminals = {};
 var wordstats = {};
+var file = "titles.txt";
+var fs = require("fs");
 
 for(var i = 0; i < titles.length; i++){
     var words = titles[i].split(' ');
