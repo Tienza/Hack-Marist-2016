@@ -1,1 +1,1 @@
-console.log(document.getElementbyClass("titleText"));
+//console.log(document.getElementsbyClassName("titleText"));
