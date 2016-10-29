@@ -35,8 +35,14 @@ var titles = ["'This Changes Everything': Donald Trump Exults as Hillary Clinton
 "First Time Voters"];
   $(function() {
 	$.get('titles.txt', function(data) {
-		  data.split('\n');
-	   alert(data);
+	  arr = string.split('\n'),
+		i;
+
+	for(i in arr){
+		if(arr[i] == 123) alert(arr[i]);
+	}		
+		
+		);
 	}, 'text');
   });
   
