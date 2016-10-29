@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-	
 var titles = ["'This Changes Everything': Donald Trump Exults as Hillary Clinton's Team Scrambles",
 "Shift in the Electorates Makeup Tightens the Presidential Contest (POLL)",
 "Donald Trump changes tune on FBI with new look at Hillary Clinton email case",
@@ -41,8 +39,7 @@ var titles = ["'This Changes Everything': Donald Trump Exults as Hillary Clinton
 	   alert(data);
 	}, 'text');
   });
-=======
->>>>>>> d51e710f1a6099d85c8d3caa527b880a52ca8510
+  
 var startwords =[];
 var terminals = {};
 var wordstats = {};
