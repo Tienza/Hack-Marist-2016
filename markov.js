@@ -1,3 +1,4 @@
+	
 var titles = ["'This Changes Everything': Donald Trump Exults as Hillary Clinton's Team Scrambles",
 "Shift in the Electorates Makeup Tightens the Presidential Contest (POLL)",
 "Donald Trump changes tune on FBI with new look at Hillary Clinton email case",
@@ -33,7 +34,12 @@ var titles = ["'This Changes Everything': Donald Trump Exults as Hillary Clinton
 "James Comey Broke with Loretta Lynch and Justice Department Tradition",
 "Back the Way You Went",
 "First Time Voters"];
-
+  $(function() {
+	$.get('titles.txt', function(data) {
+		  data.split('\n');
+	   alert(data);
+	}, 'text');
+  });
 var startwords =[];
 var terminals ={};
 var wordstats = {};
@@ -68,3 +74,4 @@ function makeTitle(){
   }
   document.getElementById("output").innerHTML = title.join(' ');
 }
+
