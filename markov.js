@@ -2,7 +2,11 @@ var startwords =[];
 var terminals = {};
 var wordstats = {};
 var file = "titles.txt";
-var fs = require("fs");
+var titles = [];
+
+var rawFile = new XMLHttpRequest();
+rawFile.open("GET",file, false);
+rawFile.onreadystatechange = function(){}
 
 for(var i = 0; i < titles.length; i++){
     var words = titles[i].split(' ');
