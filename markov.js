@@ -1,63 +1,6 @@
-var titles = ["'This Changes Everything': Donald Trump Exults as Hillary Clinton's Team Scrambles",
-"Shift in the Electorates Makeup Tightens the Presidential Contest (POLL)",
-"Donald Trump changes tune on FBI with new look at Hillary Clinton email case",
-"2016 Presidential Swing State Polls Poll October 27 2016 Clinton Catches Trump For Ties Quinnipiac University",
-"Someone Was Actually Arrested For In Person Voter Fraud Shes A Trump Supporter",
-"Iowa GOP voter arrested for alleged voter fraud report",
-"Donald Trump supporter in Iowa arrested for voter fraud",
-"Voter fraud suspect arrested in Des Moines",
-"Iowa woman faces criminal charges in voter fraud case",
-"Iowa Woman Arrested For Committing Voter Fraud",
-"Eric Garners daughter blasts Clinton campaign after WikiLeaks emails",
-"Daughter of Eric Garner slams Clinton campaign over emails about fathers death",
-"Eric Garners daughter criticizes Hillary Clinton after WikiLeaks emails",
-"Eric Garners Daughter Slams Clinton Campaign Over Emails Confusing Police Brutality And Gun Violence",
-"Re HRC Op-Ed on Gun Violence WikiLeaks The Podesta Emails",
-"Bernie Sanders issues not so subtle warning to next president",
-"Luntz Last Time Clintons Email Woes Were This Bad She Lost 22 States to Bernie Sanders",
-"Hey Lefties Hillary is Not Your Friend",
-"Bernie Sanders Says What The Media Wont Trump Is A Gutless Political Coward",
-"These angry Texans planned protest votes against Clinton Trump but close polls have changed some minds",
-"Gunmen kill four at Shiite Muslim gathering in Karachi",
-"Air strike kills 17 in Yemen exiled president rejects peace plan",
-"Fact Checking Everything Trump and Clinton Said About the FBIs Email Review",
-"The Weather Channel",
-"Weather Underground",
-"AccuWeather",
-"New Providence High School Senior Builds Cello Racks for Paterson Music Project Earns Eagle Scout Rank",
-"Womens Health Awareness Event in New Providence November 6",
-"Ridge High School Marching Band Will Host Its 7th Annual Band Competition Saturday Oct 29th",
-"Marist football sets to clash with league rival San Diego",
-"Company based at Dutchess County Airport to expand partner with",
-"Halloween parade in Poughkeepsie Sunday",
-"James Comey Broke with Loretta Lynch and Justice Department Tradition",
-"Back the Way You Went",
-"First Time Voters"];
-  $(function() {
-	  
-	//$.get('titles.txt', function(data) {
-	//}, 'text');
-$.getJSON( "titles.json", function( data ) {
-	//array to store all titles, change to use array that is created below
-  var items = [];
-  $.each( data, function( key, val ) {
-	  //console to see all keys and values for debugging purposes
-    //console.log( "key is: " + key + " .value is: " + val + " ." );
-    //push items to array
-    items.push( val);
-  });
-  //print items to debug
-  //console.log(items);
- 
-});
-	
-  });
-  
 var startwords =[];
-var terminals = {};
+var terminals ={};
 var wordstats = {};
-var file = "titles.txt";
-var fs = require("fs");
 
 for(var i = 0; i < titles.length; i++){
     var words = titles[i].split(' ');
@@ -89,4 +32,3 @@ function makeTitle(){
   }
   document.getElementById("output").innerHTML = title.join(' ');
 }
-
