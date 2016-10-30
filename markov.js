@@ -29,6 +29,25 @@ function makeTitle(){
     var next = wordstats[word];
     word = choice(next);
     title.push(word);
+	if(title.length > 20){
+		break;
+	}
   }
-  document.getElementById("output").innerHTML = title.join(' ');
+	var randomNumber=Math.floor(Math.random() * 10);
+	var randomWord=title[randomNumber];
+	console.log("random word is " +randomWord);
+	document.getElementById("output").innerHTML = title.join(' ');
+	var pixaApiCall="https://pixabay.com/api/?key=3642202-1845bf84f1549e9e2f8f587c3&q="+randomWord+"&image_type=photo&pretty=true";
+	console.log(pixaApiCall);
+	var request = new XMLHttpRequest();
+   request.open("GET", pixaApiCall, false);
+   request.send(null);
+   var my_JSON_object = JSON.parse(request.responseText);
+   if(my_JSON_object.totalHits !=0){
+	var relatedImage=my_JSON_object.hits[0].webformatURL;
+	console.log(relatedImage);
+	document.getElementById("backgroundImages").style.backgroundImage = "url("+relatedImage+")";
+   }
+	//(my_JSON_object.hit[0].);
 }
+//var pixaApiCall="https://pixabay.com/api/?key=3642202-1845bf84f1549e9e2f8f587c3&q="+ +"&image_type=photo&pretty=true";
