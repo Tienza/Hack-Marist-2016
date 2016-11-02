@@ -1,17 +1,30 @@
+/**
+ * Description goes Here
+ * 
+ * @authors Vallie Joseph, Peter Sofranas, and Piradon Liengtiraphan
+ */
+
+//begin variable listing
 var startwords = [];
 var terminals = {};
 var wordstats = {};
 
+//Start JSON javascript parsing
 var titlesRequest = new XMLHttpRequest();
 titlesRequest.open("GET", "titles.json", false);
 titlesRequest.send(null);
 var titleJSON = JSON.parse(titlesRequest.responseText);
+//debug message:
 //console.log(titleJSON);
 var titles = [];
 for (var key in titleJSON) {
     titles.push(titleJSON[key]);
 }
-console.log(titles);
+//end JSON parsing
+//debug message:
+//console.log(titles);
+
+//start Markov Chain
 for (var i = 0; i < titles.length; i++) {
     var words = titles[i].split(' ');
     terminals[words[words.length - 1]] = true;
@@ -29,6 +42,7 @@ var choice = function(a) {
     return a[i];
 }
 
+//on click, activate this function
 function makeTitle() {
     word = choice(startwords);
     var title = [word];
@@ -43,6 +57,7 @@ function makeTitle() {
             break;
         }
     }
+    //pixa api call
     var randomNumber = Math.floor(Math.random() * 10);
     var randomWord = title[randomNumber];
     console.log("random word is " + randomWord);
